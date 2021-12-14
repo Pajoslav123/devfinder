@@ -1,0 +1,114 @@
+:root {
+  --clr-dark: #141c2f;
+  --clr-lighter: #1f2a48;
+  --clr-accent: #4062b3;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: var(--clr-dark);
+  font-family: "Lato", sans-serif;
+  color: #fff;
+}
+.navbar .nav-items {
+  padding-top: 1rem;
+}
+.nav-items .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container {
+  max-width: 1000px;
+  width: 80%;
+  margin: 0 auto;
+}
+.search {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  background-color: var(--clr-lighter);
+}
+.search input {
+  background-color: var(--clr-lighter);
+  outline: 0;
+  border: 0;
+  color: #fff;
+  width: 100%;
+  margin: 0 1rem;
+}
+.search img {
+  width: 32px;
+  height: auto;
+}
+.search button {
+  border: 0;
+  background-color: var(--clr-accent);
+  color: #fff;
+  border-radius: 10px;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+.contact-info img {
+  width: 24px;
+}
+.search button:hover {
+  background-color: #6d92e9;
+}
+.content {
+  background-color: var(--clr-lighter);
+  margin-top: 1rem;
+  padding: 2rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+.content .user-avatar {
+  height: 130px;
+  width: auto;
+  border-radius: 50%;
+}
+.user-information {
+  margin-left: 3rem;
+  width: 80%;
+}
+.user-information .main-info {
+  display: flex;
+  justify-content: space-between;
+}
+.user-information .main-info .date-joined {
+  align-self: center;
+}
+.user-information .bio {
+  margin: 1rem 0;
+}
+.user-information .tag {
+  color: var(--clr-accent);
+}
+.user-information .contact-info {
+  display: flex;
+  margin-top: 1.5rem;
+}
+.user-information .info-block + .info-block {
+  margin-left: 2rem;
+}
+.user-information .contact-info .info {
+  display: flex;
+  margin-bottom: 0.7rem;
+}
+.user-information .contact-info .info p {
+  margin-left: 0.5rem;
+}
+.user-information .stats-container {
+  display: flex;
+  padding: 0.8rem 1rem;
+  justify-content: space-between;
+  border-radius: 10px;
+  width: 100%;
+  background-color: var(--clr-dark);
+}
