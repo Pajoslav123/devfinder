@@ -71,6 +71,7 @@ body {
 .content .user-avatar {
   height: 130px;
   width: auto;
+  border: 3px solid var(--clr-accent);
   border-radius: 50%;
 }
 .user-information {
@@ -79,6 +80,7 @@ body {
 }
 .user-information .main-info {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .user-information .main-info .date-joined {

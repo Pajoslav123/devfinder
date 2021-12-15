@@ -27,45 +27,45 @@
         <div class="container">
             <div class="search">
                 <img src="search_icon.png" alt="" class="search-icon">
-                <input type="text" name="" placeholder="Search GitHub username..." id="">
-                <button>Search</button>
+                <input id = "searchbar" type="text" name="" placeholder="Search GitHub username (ex. Pajoslav123)..." id="">
+                <button onclick="getUserInfo()">Search</button>
             </div>
         </div>
         <div class="container">
             <div class="content">
-                <img src="placeholder.png" alt="" class="user-avatar">
+                <img src="placeholder.png" alt="" id = "userAvatar" class="user-avatar">
                 <div class="user-information">
                     <div class="main-info">
                         <div class="">
                             <h1 class="username">The Octocat</h1>
                             
                         </div>
-                        <p class="date-joined">Joined 25 Jan 2011</p>
+                        <p class="date-joined" id ="date-joined">Joined 25 Jan 2011</p>
                         
                     </div>
-                    <p class="tag">@octocat</p>
+                    <p class="tag" id = "tag">@octocat</p>
                     
                     
-                    <p class="bio">This profile has no bio</p>
+                    <p class="bio" id = "bio">This profile has no bio</p>
                     <div class="stats-container">
                         <div class="stat">
-                            <h5 class="repos">Repos</h1>
-                            <p class="value">8</p>
+                            <h5 class="repos" >Repos</h1>
+                            <p class="value" id ="repos">8</p>
                         </div>
                         <div class="stat">
-                            <h5 class="repos">Followers</h1>
-                            <p class="value">3938</p>
+                            <h5 class="repos" >Followers</h1>
+                            <p class="value"id ="followers">3938</p>
                         </div>
                         <div class="stat">
-                            <h5 class="repos">Following</h1>
-                            <p class="value">9</p>
+                            <h5 class="repos" >Following</h1>
+                            <p class="value" id ="following">9</p>
                         </div>
                     </div>
                     <div class="contact-info">
                         <div class="info-block">
                             <div class="info">
                                 <img src="map.png" alt="" class="icon">
-                                <p class="location">San Francisco</p>
+                                <p class="location" id = "location">San Francisco</p>
                             </div>
                             <div class="info">
                                 <img src="link.png" alt="" class="icon">
@@ -89,7 +89,7 @@
             
         </div>
     </main>
-
+   
     <script src="main.js"></script>
 </body>
 </html>
