@@ -114,3 +114,37 @@ body {
   width: 100%;
   background-color: var(--clr-dark);
 }
+@media screen and (max-width: 730px) {
+  .container .content {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container .content .user-information {
+    margin-left: 0;
+  }
+  .container .user-avatar {
+    height: auto;
+    width: 200px;
+    margin-bottom: 1rem;
+  }
+  .user-information .bio {
+    text-align: center;
+  }
+  .user-information .contact-info {
+    flex-direction: column;
+  }
+  .user-information .info-block + .info-block {
+    margin-left: 0rem;
+  }
+  .user-information .tag {
+    text-align: center;
+  }
+  .user-information .main-info {
+    justify-content: center;
+  }
+  .user-information .date-joined {
+    margin-left: 1rem;
+  }
+}

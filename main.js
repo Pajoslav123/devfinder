@@ -10,13 +10,17 @@ function getUserInfo(userName){
     .then(response => response.json())
     .then(data => {
         console.log(data);
+        if(data.message && data.message == "Not Found"){
+            document.getElementById("searchbar").value = "User Not Found";
+            return;
+        }
         if(data.name == null){
-            document.getElementById("username").textContent = data.login;
+            
         }
         else
             document.getElementById("username").textContent = data.name;
         if(data.location == null){
-            document.getElementById("location").textContent = "Not available";
+            document.getElementById("location").textContent = "Not Available";
         }
         else
             document.getElementById("location").textContent = data.location;
@@ -40,7 +44,9 @@ function getUserInfo(userName){
         .then(data => document.getElementById("repos").textContent = data.length);
         
     }
-);
+).catch((error) => {
+    console.error('Error:', error);
+  });
 }
 
     
