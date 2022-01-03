@@ -14,14 +14,17 @@ function getUserInfo(userName){
     }
     
     fetch('https://api.github.com/users/'+userName)
-    .then(response => response.json())
+    .then(response => {
+        if(!response.ok){
+            document.getElementById("searchbar").value = "Error! Check for spelling and/or if the name is valid";
+        }
+        return response.json()
+    })
     .then(data => {
         
         fetch(data.repos_url)
         .then(response => {
-            if(!response.ok){
-                document.getElementById("searchbar").value = "Error! Check for spelling and/or if the name is valid";
-            }
+            
             return response.json()
         })
         .then(repo => {
