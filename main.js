@@ -18,7 +18,12 @@ function getUserInfo(userName){
     .then(data => {
         
         fetch(data.repos_url)
-        .then(response => response.json())
+        .then(response => {
+            if(!response.ok){
+                document.getElementById("searchbar").value = "Error! Check for spelling and/or if the name is valid";
+            }
+            return response.json()
+        })
         .then(repo => {
                 console.log(data);
             if(data.message && data.message == "Not Found"){
