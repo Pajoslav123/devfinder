@@ -1,5 +1,12 @@
 
 //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
+const body = document.body;
+document.getElementById('darkMode').onclick = () => {
+    body.classList.replace('light','dark');
+}
+document.getElementById('lightMode').onclick = () => {
+    body.classList.replace('dark','light');
+}
 
 function getUserInfo(userName){
     if(userName == null){
@@ -19,7 +26,7 @@ function getUserInfo(userName){
                 return;
             }
             if(data.name == null){
-                
+                document.getElementById("username").textContent = data.login;
             }
             else
                 document.getElementById("username").textContent = data.name;
